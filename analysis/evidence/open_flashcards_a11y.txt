@@ -1,0 +1,99 @@
+- document:
+  - banner:
+    - button "Practice Workbook":
+      - strong: Practice Workbook
+    - button "Create notebook"
+    - button "Copy"
+    - button "Analytics"
+    - button "Mute sound" [pressed]
+    - button "Switch to dark theme": Dark
+    - button "Share"
+    - button "Settings"
+  - complementary:
+    - heading "01 Sources" [level=2]
+    - text: "3"
+    - button "Add sources"
+    - text: Find new sources
+    - button "◉ Web⌄"
+    - button "Fast research⌄"
+    - textbox "Search saved sources"
+    - paragraph: Selected sources are used for generation and search
+    - text: Select all sources
+    - checkbox "Select all sources" [checked]
+    - button "01 Sorting algorithms.md MD · Sample source":
+      - strong: 01 Sorting algorithms.md
+      - text: MD · Sample source
+    - 'checkbox "Select source: 01 Sorting algorithms.md" [checked]'
+    - button "02 Essential data structures.md MD · Sample source":
+      - strong: 02 Essential data structures.md
+      - text: MD · Sample source
+    - 'checkbox "Select source: 02 Essential data structures.md" [checked]'
+    - button "03 Search and traversal.txt TXT · Sample source":
+      - strong: 03 Search and traversal.txt
+      - text: TXT · Sample source
+    - 'checkbox "Select source: 03 Search and traversal.txt" [checked]'
+    - strong: Your sources stay yours
+    - paragraph: Files are read in your browser. No account needed.
+  - main:
+    - text: "02"
+    - button "Back to overview"
+    - text: Flashcards 3 sources selected RECALL FROM YOUR QUESTION BANK
+    - heading "Recall first. Reveal second." [level=1]
+    - paragraph: Data Structures · Foundations · 10 cards
+    - button "Flip to see the answer":
+      - text: QUESTION 1/10
+      - strong: Which sorting algorithm is stable?
+      - text: Tap to flip
+    - button "Previous" [disabled]
+    - text: 1 / 10
+    - button "Next card"
+  - complementary:
+    - heading "03 Studio" [level=2]
+    - paragraph: TURN SOURCES INTO PROGRESS
+    - button "Quiz From your sources":
+      - strong: Quiz
+      - text: From your sources
+    - button "Flashcards Recall & reveal":
+      - strong: Flashcards
+      - text: Recall & reveal
+    - button "Practice Instant feedback":
+      - strong: Practice
+      - text: Instant feedback
+    - button "Mock exam Grade at the end":
+      - strong: Mock exam
+      - text: Grade at the end
+    - button "Reports Review your progress":
+      - strong: Reports
+      - text: Review your progress
+    - button "Data table Browse source excerpts":
+      - strong: Data table
+      - text: Browse source excerpts
+    - button "Audio overview Preview Coming soon" [disabled]:
+      - strong: Audio overview
+      - text: Preview
+      - emphasis: Coming soon
+    - button "Mind map Preview Coming soon" [disabled]:
+      - strong: Mind map
+      - text: Preview
+      - emphasis: Coming soon
+    - text: Active question bank
+    - combobox "Active question bank":
+      - option "Data Structures · Foundations" [selected]
+      - option "Workplace Safety · General"
+    - text: Instant grading
+    - checkbox "Instant grading" [checked]
+    - text: Shuffle questions
+    - checkbox "Shuffle questions"
+    - text: 10-minute time limit
+    - checkbox "10-minute time limit"
+    - button "Mistake notebook 0"
+    - button "Study notes"
+    - button "Search sources"
+    - strong: Studio output will be saved here
+    - paragraph: After adding sources, create quizzes, flashcards, and reports.
+    - button "Add note"
+  - link "Kimi Kimi":
+    - /url: https://www.kimi.com/build
+    - img "Kimi"
+    - text: Kimi
+    - img

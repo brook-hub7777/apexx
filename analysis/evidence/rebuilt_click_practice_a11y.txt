@@ -1,0 +1,173 @@
+- document:
+  - banner:
+    - button "Practice Workbook":
+      - strong: Practice Workbook
+    - button "Create notebook":
+      - img
+      - text: Create notebook
+    - button "Copy":
+      - img
+      - text: Copy
+    - button "Analytics":
+      - img
+      - text: Analytics
+    - button "Mute sound":
+      - img
+    - button "Switch to dark theme":
+      - img
+      - text: Dark
+    - button "Share":
+      - img
+      - text: Share
+    - button "Settings":
+      - img
+      - text: Settings
+  - complementary:
+    - heading "01 Sources" [level=2]
+    - text: "3"
+    - button "Add sources":
+      - img
+      - text: Add sources
+    - text: Find new sources
+    - button "◉ Web⌄"
+    - button "Fast research⌄"
+    - textbox "Search saved sources"
+    - paragraph: Selected sources are used for generation and search
+    - checkbox "Select all sources" [checked]
+    - text: Select all sources
+    - img
+    - strong: 01 Sorting algorithms.md
+    - text: MD · Sample source
+    - 'checkbox "Select source: 01 Sorting algorithms.md" [checked]'
+    - img
+    - strong: 02 Essential data structures.md
+    - text: MD · Sample source
+    - 'checkbox "Select source: 02 Essential data structures.md" [checked]'
+    - img
+    - strong: 03 Search and traversal.txt
+    - text: TXT · Sample source
+    - 'checkbox "Select source: 03 Search and traversal.txt" [checked]'
+    - strong: Your sources stay yours
+    - paragraph: Files are read in your browser. No account needed.
+  - main:
+    - button "Back to overview":
+      - img
+      - text: Back to overview
+    - text: Question bank · YOUR EDITABLE QUESTION BANK
+    - heading "Data Structures · Foundations" [level=1]
+    - paragraph: 10 questions · Review the content before practicing
+    - button "Start practice":
+      - img
+      - text: Start practice
+    - button "Edit questions":
+      - img
+      - text: Edit questions
+    - button "Export bank as JSON":
+      - img
+      - text: Export bank as JSON
+    - article:
+      - text: 01Single choice· Sorting
+      - heading "Which sorting algorithm is stable?" [level=3]
+      - text: Show answer and explanation
+    - article:
+      - text: 02Single choice· Sorting
+      - heading "Which algorithm is fastest on a nearly sorted array?" [level=3]
+      - text: Show answer and explanation
+    - article:
+      - text: 03Single choice· Search
+      - heading "In the worst case, how many comparisons does binary search need for 1,000 elements?" [level=3]
+      - text: Show answer and explanation
+    - article:
+      - text: 04True / false· Search
+      - heading "Binary search requires the array to be sorted first." [level=3]
+      - text: Show answer and explanation
+    - article:
+      - text: 05Multiple choice· Complexity
+      - heading "Which operations are O(1) on average? (Select all that apply)" [level=3]
+      - text: Show answer and explanation
+    - article:
+      - text: 06Fill in· Complexity
+      - heading "The lower bound for comparison sorting is O(n ______ n)." [level=3]
+      - text: Show answer and explanation
+    - article:
+      - text: 07Single choice· Trees
+      - heading "A complete binary tree with n nodes has height approximately?" [level=3]
+      - text: Show answer and explanation
+    - article:
+      - text: 08Multiple choice· Trees
+      - heading "Which are balanced search trees? (Select all that apply)" [level=3]
+      - text: Show answer and explanation
+    - article:
+      - text: 09Single choice· Graphs
+      - heading "Which algorithm handles single-source shortest paths with possible negative edges?" [level=3]
+      - text: Show answer and explanation
+    - article:
+      - text: 10True / false· Graphs
+      - heading "Depth-first search always finds the shortest path in an unweighted graph." [level=3]
+      - text: Show answer and explanation
+  - complementary:
+    - heading "03 Studio" [level=2]
+    - paragraph: TURN SOURCES INTO PROGRESS
+    - button "QuizFrom your sources":
+      - img
+      - strong: Quiz
+      - text: From your sources
+      - img
+    - button "FlashcardsRecall & reveal":
+      - img
+      - strong: Flashcards
+      - text: Recall & reveal
+      - img
+    - button "PracticeInstant feedback":
+      - img
+      - strong: Practice
+      - text: Instant feedback
+      - img
+    - button "Mock examGrade at the end":
+      - img
+      - strong: Mock exam
+      - text: Grade at the end
+      - img
+    - button "ReportsReview your progress":
+      - img
+      - strong: Reports
+      - text: Review your progress
+      - img
+    - button "Data tableBrowse source excerpts":
+      - img
+      - strong: Data table
+      - text: Browse source excerpts
+      - img
+    - button "Audio overviewPreview Coming soon" [disabled]:
+      - img
+      - strong: Audio overview
+      - text: Preview
+      - emphasis: Coming soon
+    - button "Mind mapPreview Coming soon" [disabled]:
+      - img
+      - strong: Mind map
+      - text: Preview
+      - emphasis: Coming soon
+    - text: Active question bank
+    - combobox "Active question bank":
+      - option "Data Structures · Foundations" [selected]
+      - option "Workplace Safety · General"
+    - text: Instant grading
+    - checkbox "Instant grading" [checked]
+    - text: Shuffle questions
+    - checkbox "Shuffle questions"
+    - text: 10-minute time limit
+    - checkbox "10-minute time limit"
+    - button "Mistake notebook 0":
+      - img
+      - text: Mistake notebook 0
+    - button "Study notes":
+      - img
+      - text: Study notes
+    - button "Search sources":
+      - img
+      - text: Search sources
+    - strong: Studio output will be saved here
+    - paragraph: After adding sources, create quizzes, flashcards, and reports.
+    - button "Add note"
+  - text: Practice mode selected

@@ -1,0 +1,40 @@
+- document:
+  - banner:
+    - button "Practice Workbook":
+      - strong: Practice Workbook
+    - button "Mute sound" [pressed]
+    - button "Switch to dark theme": Dark
+    - button "Share"
+    - button "Settings"
+  - navigation "Workspace navigation":
+    - button "Sources"
+    - button "Study"
+    - button "Studio"
+  - main:
+    - text: 02 Chat
+    - button "Conversation settings"
+    - button "More actions"
+    - text: 3 sources selected
+    - heading "Let’s start your notebook…" [level=1]
+    - paragraph: This is your blank canvas to understand, create, or make progress. Add your own sources, or start with one of the prompts below.
+    - strong: What would you like this notebook to help you do?
+    - button "Learn about a new topic"
+    - button "Create a question bank"
+    - button "Make progress on a review"
+    - textbox "Ask a question or create something"
+    - text: 3 sources
+    - button "Search"
+    - heading "My question banks 2" [level=2]
+    - button "Create manually"
+    - button "Data Structures · Foundations 10 questions · 5 chapters":
+      - strong: Data Structures · Foundations
+      - text: 10 questions · 5 chapters
+    - button "Workplace Safety · General 8 questions · 4 chapters":
+      - strong: Workplace Safety · General
+      - text: 8 questions · 4 chapters
+    - paragraph: Local extraction, not AI reasoning. Generated questions are drafts for you to review. No sources are sent to a model.
+  - link "Kimi Kimi":
+    - /url: https://www.kimi.com/build
+    - img "Kimi"
+    - text: Kimi
+    - img

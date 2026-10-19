@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Workbook · Turn study materials into practice</title>
+<meta name="description" content="Import study materials, generate source-linked question drafts, and study with practice, exams, flashcards and a mistake notebook. Local extraction, with sources kept in your browser.">
+<style>
+/* The React mount point must not add a box of its own: body itself is the
+   viewport-filling flex / grid container, and an extra <div id="root"> in the
+   middle breaks the height:100% reference chain, so the layout would grow with
+   content instead of filling the viewport. display:contents keeps it from
+   generating a box and preserves the original parent-child relations. */
+#root{display:contents}
+</style>
+  <script type="module" crossorigin="" src="./assets/index-CxKV-nwI.js"></script>
+  <link rel="stylesheet" crossorigin="" href="./assets/index-sn7STuAq.css">
+<script src="https://www.kimi.com/sdk-seed.js" defer="" data-kimi-disable-watermark="false" data-kimi-analytics="false"></script><script src="https://statics.kimi.ai/sdk/publish.DaygGu2u.min.js" data-host="www.kimi.com" data-kimi-disable-watermark="false" data-kimi-analytics="false" async=""></script>
+    <style>
+      .kimi-brand-container {
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        z-index: 99999999;
+        transition: opacity 0.3s ease;
+      }
+
+      .kimi-brand-close-icon {
+        cursor: pointer;
+        border-radius: 50%;
+        width: 26px;
+        height: 26px;
+        background: #000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        border: 0.5px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .kimi-brand-container:hover .kimi-brand-close-icon {
+        display: flex;
+      }
+
+      .kimi-brand-info-wrapper {
+        position: relative;
+        display: none;
+        width: 26px;
+        height: 26px;
+        flex-shrink: 0;
+      }
+
+      .kimi-brand-container:hover .kimi-brand-info-wrapper {
+        display: block;
+      }
+
+      .kimi-brand-info-wrapper::before {
+        content: "";
+        position: absolute;
+        right: -8px;
+        bottom: 100%;
+        left: -8px;
+        display: none;
+        height: 12px;
+      }
+
+      .kimi-brand-info-wrapper:hover::before {
+        display: block;
+      }
+
+      .kimi-brand-info-button {
+        cursor: pointer;
+        border-radius: 50%;
+        width: 26px;
+        height: 26px;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0.5px solid rgba(255, 255, 255, 0.15);
+        color: rgba(255, 255, 255, 0.84);
+        padding: 0;
+      }
+
+      .kimi-brand-info-button:hover {
+        background: #000;
+      }
+
+      .kimi-brand-info-tooltip {
+        position: fixed;
+        right: 16px;
+        bottom: 52px;
+        box-sizing: border-box;
+        width: 240px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        background: #2b2b2b;
+        color: rgba(255, 255, 255, 0.72);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        font-size: 12px;
+        line-height: 18px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(4px);
+        transition: opacity 0.15s ease, transform 0.15s ease;
+        z-index: 99999999;
+      }
+
+      .kimi-brand-info-wrapper:hover .kimi-brand-info-tooltip {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .kimi-brand-info-tooltip::after {
+        content: "";
+        position: absolute;
+        right: 127px;
+        bottom: -5px;
+        width: 10px;
+        height: 10px;
+        background: #2b2b2b;
+        transform: rotate(45deg);
+      }
+
+      .kimi-brand-report-link {
+        color: #6AA6FF;
+        text-decoration: none;
+      }
+
+      .kimi-brand-report-link:hover {
+        color: #A6D0FF;
+      }
+
+      .kimi-brand-link {
+        background: #000;
+        color: white;
+        padding: 4px 6px 4px 4px;
+        border-radius: 16px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        line-height: 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        border: 0.5px solid rgba(255, 255, 255, 0.15);
+        text-decoration: none;
+      }
+
+      .kimi-brand-container:hover .kimi-brand-icon {
+        width: 16px;
+      }
+
+      .kimi-brand-icon {
+        width: 0;
+        overflow: hidden;
+        transition: width 0.3s ease;
+        pointer-events: none;
+      }
+
+      .kimi-brand-avatar {
+        width: 18px;
+        height: 18px;
+        border: 0.5px solid rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+<body>
+<div id="root"><div class="wb-app"><header class="wb-top"><button class="wb-brand"><span class="wb-brand-mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3h12a3 3 0 0 1 3 3v15H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3M3 17h16M8 3v10l3-2 3 2V3"></path></svg></span><strong>Practice Workbook</strong><span class="wb-brand-sub">Local study space</span></button><div class="wb-top-end"><div class="wb-top-actions"><button class="wb-primary wb-create"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Create notebook</button><button class="wb-button wb-top-action"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg>Copy</button><button class="wb-button wb-top-action"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5M4 19h16"></path><path d="m7 15 3-4 3 2 5-6"></path></svg>Analytics</button></div><span class="wb-local"><span></span>Saved on this device</span><button class="wb-icon" aria-label="Mute sound" aria-pressed="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 4 0 5-5v16l-5-5H3zM16 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"></path></svg></button><button class="wb-icon wb-theme-toggle" aria-label="Switch to dark theme" aria-pressed="false" title="Dark · warm ink"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.2A8.5 8.5 0 0 1 9.8 4a8.5 8.5 0 1 0 10.2 10.2Z"></path></svg><span>Dark</span></button><button class="wb-button wb-share"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="3"></circle><circle cx="19" cy="5" r="3"></circle><circle cx="19" cy="19" r="3"></circle><path d="m8 11 8-5m-8 7 8 5"></path></svg>Share</button><button class="wb-button wb-settings-button"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h3M11 12h9M4 18h10M18 18h2"></path><circle cx="16" cy="6" r="2"></circle><circle cx="9" cy="12" r="2"></circle><circle cx="16" cy="18" r="2"></circle></svg>Settings</button><span class="wb-avatar" aria-hidden="true">W</span></div></header><nav class="wb-mobile-nav" aria-label="Workspace navigation"><button>Sources</button><button aria-current="page">Study</button><button>Studio</button></nav><div class="wb-layout"><aside class="wb-pane wb-sources "><div class="wb-pane-head"><h2>Sources</h2><span class="wb-count">3</span></div><button class="wb-button wb-add"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add sources</button><div class="wb-source-research"><span>Find new sources</span><div><button>◉ Web⌄</button><button><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6"></circle><path d="m15 15 6 6"></path></svg>Fast research⌄</button></div></div><label class="wb-source-search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6"></circle><path d="m15 15 6 6"></path></svg><input placeholder="Search saved sources" aria-label="Search saved sources" value="" style=""></label><p class="wb-fine wb-source-hint">Selected sources are used for generation and search</p><label class="wb-check wb-select-all"><span>Select all sources</span><input type="checkbox" checked="" style=""></label><div class="wb-source-list"><div class="wb-source-row "><button class="wb-source-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8M8 16h6"></path></svg><span><strong>01 Sorting algorithms.md</strong><small>MD · Sample source</small></span></button><label class="wb-checkbox"><input aria-label="Select source: 01 Sorting algorithms.md" type="checkbox" checked="" style=""></label></div><div class="wb-source-row "><button class="wb-source-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8M8 16h6"></path></svg><span><strong>02 Essential data structures.md</strong><small>MD · Sample source</small></span></button><label class="wb-checkbox"><input aria-label="Select source: 02 Essential data structures.md" type="checkbox" checked="" style=""></label></div><div class="wb-source-row "><button class="wb-source-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8M8 16h6"></path></svg><span><strong>03 Search and traversal.txt</strong><small>TXT · Sample source</small></span></button><label class="wb-checkbox"><input aria-label="Select source: 03 Search and traversal.txt" type="checkbox" checked="" style=""></label></div></div><div class="wb-source-bottom"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6zM8 12l3 3 5-6"></path></svg><div><strong>Your sources stay yours</strong><p>Files are read in your browser. No account needed.</p></div></div></aside><main class="wb-pane wb-main wb-mobile-active"><div class="wb-pane-head"><div class="wb-breadcrumb"><span>Chat</span></div><div class="wb-head-tools"><button class="wb-icon" aria-label="Conversation settings"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h3M11 12h9M4 18h10M18 18h2"></path><circle cx="16" cy="6" r="2"></circle><circle cx="9" cy="12" r="2"></circle><circle cx="16" cy="18" r="2"></circle></svg></button><button class="wb-icon" aria-label="More actions"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle></svg></button><span class="wb-source-badge">3 sources selected</span></div></div><div class="wb-main-content"><section class="wb-chat-empty"><div class="wb-comic-art" aria-hidden="true"><div class="wb-comic-caption"><span>VOL. 01 / STUDY CLUB</span><strong>FIELD<br>NOTES<span>✦</span></strong><small>READ. THINK. REPEAT.</small></div><img alt="" width="1024" height="1024" fetchpriority="high" src="./media/study-archivist-v2.webp"><span class="wb-comic-stamp">KEEP<br>CURIOUS</span></div><h1>Let’s start your notebook…</h1><p>This is your blank canvas to understand, create, or make progress. Add your own sources, or start with one of the prompts below.</p><strong>What would you like this notebook to help you do?</strong><div class="wb-prompt-chips"><button class="wb-chip">Learn about a new topic</button><button class="wb-chip">Create a question bank</button><button class="wb-chip">Make progress on a review</button></div><form class="wb-chat-prompt"><input placeholder="Ask a question or create something" aria-label="Ask a question or create something" value="" style=""><span>3 sources</span><button type="submit" aria-label="Search"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button></form></section><section class="wb-library wb-home-library"><div class="wb-section-title"><h2>My question banks<span>2</span></h2><button class="wb-text-button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Create manually</button></div><button class="wb-bank-row is-current"><span class="wb-bank-symbol"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="m8 8 1 1 2-2m-3 7 1 1 2-2M14 8h3M14 14h3"></path></svg></span><span class="wb-bank-copy"><strong>Data Structures · Foundations</strong><small>10 questions <span>·</span> 5 chapters</small></span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button><button class="wb-bank-row "><span class="wb-bank-symbol"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3h12a3 3 0 0 1 3 3v15H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3M3 17h16M8 3v10l3-2 3 2V3"></path></svg></span><span class="wb-bank-copy"><strong>Workplace Safety · General</strong><small>8 questions <span>·</span> 4 chapters</small></span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button></section><div class="wb-boundary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6zM8 12l3 3 5-6"></path></svg><p>Local extraction, not AI reasoning. Generated questions are drafts for you to review. No sources are sent to a model.</p></div></div></main><aside class="wb-pane wb-studio "><div class="wb-pane-head"><h2>Studio</h2><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"></path></svg></div><div class="wb-studio-body"><p class="wb-section-caption">TURN SOURCES INTO PROGRESS</p><div class="wb-studio-grid"><button class="wb-studio-card wb-studio-blue wb-studio-featured"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"></path></svg><strong>Quiz</strong><small>From your sources</small><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button><button class="wb-studio-card wb-studio-red"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="5" width="13" height="16" rx="2"></rect><path d="m4 17-2-13 12-2M11 10h5M11 14h4"></path></svg><strong>Flashcards</strong><small>Recall &amp; reveal</small><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button><button class="wb-studio-card wb-studio-cyan"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="m8 8 1 1 2-2m-3 7 1 1 2-2M14 8h3M14 14h3"></path></svg><strong>Practice</strong><small>Instant feedback</small><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button><button class="wb-studio-card wb-studio-purple"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><strong>Mock exam</strong><small>Grade at the end</small><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button><button class="wb-studio-card wb-studio-yellow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5M4 19h16"></path><path d="m7 15 3-4 3 2 5-6"></path></svg><strong>Reports</strong><small>Review your progress</small><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button><button class="wb-studio-card wb-studio-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M4 10h16M10 4v16M15 10v10"></path></svg><strong>Data table</strong><small>Browse source excerpts</small><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button><button class="wb-studio-card wb-studio-green" disabled=""><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"></path></svg><strong>Audio overview</strong><small>Preview</small><em>Coming soon</em><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button><button class="wb-studio-card wb-studio-pink" disabled=""><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"></path></svg><strong>Mind map</strong><small>Preview</small><em>Coming soon</em><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button></div><div class="wb-divider"></div><label class="wb-field wb-bank-select">Active question bank<select><option value="ds">Data Structures · Foundations</option><option value="safe">Workplace Safety · General</option></select></label><div class="wb-settings"><label class="wb-check"><span>Instant grading</span><input type="checkbox" checked="" style=""></label><label class="wb-check"><span>Shuffle questions</span><input type="checkbox" style=""></label><label class="wb-check"><span>10-minute time limit</span><input type="checkbox" style=""></label></div><div class="wb-divider"></div><button class="wb-studio-row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h14v18l-7-4-7 4zM9 8l6 6m0-6-6 6"></path></svg><span>Mistake notebook</span><span class="wb-count">0</span></button><button class="wb-studio-row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 16 12-12 4 4L8 20H4zM13 7l4 4"></path></svg><span>Study notes</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button><button class="wb-studio-row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6"></circle><path d="m15 15 6 6"></path></svg><span>Search sources</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button><div class="wb-studio-output"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"></path></svg><strong>Studio output will be saved here</strong><p>After adding sources, create quizzes, flashcards, and reports.</p><button class="wb-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"></path></svg>Add note</button></div></div></aside></div></div></div>
+
+
+
+  <div class="kimi-brand-container">
+    <div class="kimi-brand-close-icon">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.499 3.50216C12.7226 3.72574 12.7226 4.08825 12.499 4.31184L8.81035 8.00029L12.4972 11.6872C12.7208 11.9107 12.7208 12.2733 12.4972 12.4968C12.2736 12.7204 11.9111 12.7204 11.6875 12.4968L8.00066 8.80998L4.31221 12.4986C4.10582 12.705 3.78106 12.7209 3.55646 12.5463L3.50252 12.4986C3.27893 12.2751 3.27893 11.9126 3.50252 11.689L7.19098 8.00029L3.50107 4.31038C3.27748 4.0868 3.27748 3.72429 3.50107 3.5007C3.72465 3.27711 4.08716 3.27711 4.31075 3.5007L8.00066 7.19061L11.6893 3.50216C11.8957 3.29577 12.2205 3.27989 12.4451 3.45453L12.499 3.50216Z" fill="white" fill-opacity="0.84"></path>
+      </svg>
+    </div>
+
+    <div class="kimi-brand-info-wrapper">
+      <button type="button" class="kimi-brand-info-button" aria-label="AI content notice">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.033333 5.668a0.666667 0.666667 0 0 1 0.666667 0.666667v6.072a0.666667 0.666667 0 0 1-1.333333 0V6.334667a0.666667 0.666667 0 0 1 0.666667-0.666667z m0-2.829333a0.933333 0.933333 0 1 1 0 1.866667 0.933333 0.933333 0 0 1 0-1.866667z" fill="white" fill-opacity="0.84"></path>
+        </svg>
+      </button>
+      <div class="kimi-brand-info-tooltip">
+        This webpage contains AI-generated content, which may have been edited by users. Please verify it carefully and do not submit any personal information. If you believe the content infringes rights or is illegal, you may <a href="https://www.kimi.com/report?from=website&amp;reportUrl=https%3A%2F%2Faexehjvfubefs.ok.kimi.link%2F" target="_blank" rel="noopener" class="kimi-brand-report-link">submit a report to request a review</a>.
+      </div>
+    </div>
+
+    <a href="https://www.kimi.com/build" target="_blank" class="kimi-brand-link">
+      <img src="data:image/png;base64,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" alt="Kimi" class="kimi-brand-avatar">
+      <span>Kimi </span>
+      <svg width="16" height="16" class="kimi-brand-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2925 8.54311C14.5253 8.30855 14.5247 7.92983 14.2909 7.69611L10.5986 4.00381C10.3643 3.76949 9.98442 3.76949 9.7501 4.00381C9.51579 4.23812 9.51579 4.61802 9.7501 4.85233L12.4181 7.52038H1.86667C1.5353 7.52038 1.26667 7.78901 1.26667 8.12038C1.26667 8.45175 1.5353 8.72038 1.86667 8.72038H12.4255L9.74857 11.4167C9.51511 11.6519 9.51648 12.0318 9.75164 12.2652C9.9868 12.4987 10.3667 12.4973 10.6002 12.2622L14.2925 8.54311Z" fill="white" fill-opacity="0.84"></path>
+      </svg>
+    </a>
+  </div>
+    </body></html>

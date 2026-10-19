@@ -1,0 +1,126 @@
+- document:
+  - banner:
+    - button "Practice Workbook":
+      - strong: Practice Workbook
+    - button "Create notebook"
+    - button "Copy"
+    - button "Analytics"
+    - button "Mute sound" [pressed]
+    - button "Switch to dark theme": Dark
+    - button "Share"
+    - button "Settings"
+  - complementary:
+    - heading "01 Sources" [level=2]
+    - text: "3"
+    - button "Add sources"
+    - text: Find new sources
+    - button "◉ Web⌄"
+    - button "Fast research⌄"
+    - textbox "Search saved sources"
+    - paragraph: Selected sources are used for generation and search
+    - text: Select all sources
+    - checkbox "Select all sources" [checked]
+    - button "01 Sorting algorithms.md MD · Sample source":
+      - strong: 01 Sorting algorithms.md
+      - text: MD · Sample source
+    - 'checkbox "Select source: 01 Sorting algorithms.md" [checked]'
+    - button "02 Essential data structures.md MD · Sample source":
+      - strong: 02 Essential data structures.md
+      - text: MD · Sample source
+    - 'checkbox "Select source: 02 Essential data structures.md" [checked]'
+    - button "03 Search and traversal.txt TXT · Sample source":
+      - strong: 03 Search and traversal.txt
+      - text: TXT · Sample source
+    - 'checkbox "Select source: 03 Search and traversal.txt" [checked]'
+    - strong: Your sources stay yours
+    - paragraph: Files are read in your browser. No account needed.
+  - main:
+    - text: 02 Chat
+    - button "Conversation settings"
+    - button "More actions"
+    - text: 3 sources selected
+    - heading "Let’s start your notebook…" [level=1]
+    - paragraph: This is your blank canvas to understand, create, or make progress. Add your own sources, or start with one of the prompts below.
+    - strong: What would you like this notebook to help you do?
+    - button "Learn about a new topic"
+    - button "Create a question bank"
+    - button "Make progress on a review"
+    - textbox "Ask a question or create something"
+    - text: 3 sources
+    - button "Search"
+    - heading "My question banks 2" [level=2]
+    - button "Create manually"
+    - button "Data Structures · Foundations 10 questions · 5 chapters":
+      - strong: Data Structures · Foundations
+      - text: 10 questions · 5 chapters
+    - button "Workplace Safety · General 8 questions · 4 chapters":
+      - strong: Workplace Safety · General
+      - text: 8 questions · 4 chapters
+    - paragraph: Local extraction, not AI reasoning. Generated questions are drafts for you to review. No sources are sent to a model.
+  - complementary:
+    - heading "03 Studio" [level=2]
+    - paragraph: TURN SOURCES INTO PROGRESS
+    - button "Quiz From your sources":
+      - strong: Quiz
+      - text: From your sources
+    - button "Flashcards Recall & reveal":
+      - strong: Flashcards
+      - text: Recall & reveal
+    - button "Practice Instant feedback":
+      - strong: Practice
+      - text: Instant feedback
+    - button "Mock exam Grade at the end":
+      - strong: Mock exam
+      - text: Grade at the end
+    - button "Reports Review your progress":
+      - strong: Reports
+      - text: Review your progress
+    - button "Data table Browse source excerpts":
+      - strong: Data table
+      - text: Browse source excerpts
+    - button "Audio overview Preview Coming soon" [disabled]:
+      - strong: Audio overview
+      - text: Preview
+      - emphasis: Coming soon
+    - button "Mind map Preview Coming soon" [disabled]:
+      - strong: Mind map
+      - text: Preview
+      - emphasis: Coming soon
+    - text: Active question bank
+    - combobox "Active question bank":
+      - option "Data Structures · Foundations" [selected]
+      - option "Workplace Safety · General"
+    - text: Instant grading
+    - checkbox "Instant grading" [checked]
+    - text: Shuffle questions
+    - checkbox "Shuffle questions"
+    - text: 10-minute time limit
+    - checkbox "10-minute time limit"
+    - button "Mistake notebook 0"
+    - button "Study notes"
+    - button "Search sources"
+    - strong: Studio output will be saved here
+    - paragraph: After adding sources, create quizzes, flashcards, and reports.
+    - button "Add note"
+  - dialog "Generate from your sources":
+    - banner:
+      - heading "Generate from your sources" [level=2]
+      - button "Close"
+    - paragraph: Extracts facts locally into multiple-choice or fill-in questions. No AI calls or open-ended reasoning questions.
+    - text: "Using 3 sources: 01 Sorting algorithms.md 02 Essential data structures.md 03 Search and traversal.txt Maximum questions"
+    - combobox "Maximum questions":
+      - option "5"
+      - option "8" [selected]
+      - option "10"
+      - option "20"
+    - text: Question style
+    - combobox "Question style":
+      - option "Multiple choice + fill-in" [selected]
+      - option "Fill-in only"
+    - paragraph: Fewer extractable facts means fewer questions. Nothing is duplicated to fill a quota. Review all answers against the source.
+    - button "Generate question drafts"
+  - link "Kimi Kimi":
+    - /url: https://www.kimi.com/build
+    - img "Kimi"
+    - text: Kimi
+    - img
