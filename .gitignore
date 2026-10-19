@@ -1,0 +1,6 @@
+node_modules
+dist
+analysis
+.vercel
+.env
+.env.local
